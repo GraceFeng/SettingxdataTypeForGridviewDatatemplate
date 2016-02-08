@@ -30,10 +30,5 @@ namespace SettingxdataTypeForGridviewDatatemplate.ViewModel
             SoundEffects.Add(new SoundEffectButton { Name = "Button11", FileName = "Button11", Play = new PlayCommand() });
             SoundEffects.Add(new SoundEffectButton { Name = "Button12", FileName = "Button12", Play = new PlayCommand() });
         }
-
-        public void PlayButton()
-        {
-            //TODO:
-        }
     }
 }
