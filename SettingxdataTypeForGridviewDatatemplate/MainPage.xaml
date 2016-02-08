@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="SettingxdataTypeForGridviewDatatemplate.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SettingxdataTypeForGridviewDatatemplate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:data="using:SettingxdataTypeForGridviewDatatemplate.Model">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <GridView ItemsSource="{x:Bind ViewModel.SoundEffects}">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:SoundEffectButton">
+                    <Button
+                    Content="{Binding Name}"
+                    Tag="{Binding FileName}"
+                    Command="{x:Bind Play}"
+                    CommandParameter="{Binding FileName}" />
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>
